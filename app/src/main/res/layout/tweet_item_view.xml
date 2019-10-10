@@ -76,7 +76,7 @@
             <TextView
                 android:id="@+id/retweet_text_view"
                 style="@style/TextView.Secondary"
-                android:layout_marginStart="@dimen/text_small_margin"
+                android:layout_marginStart="5dp"
                 android:text="16"/>
         </LinearLayout>
 
@@ -92,7 +92,7 @@
             <TextView
                 android:id="@+id/likes_text_view"
                 style="@style/TextView.Secondary"
-                android:layout_marginStart="@dimen/text_small_margin"
+                android:layout_marginStart="5dp"
                 android:text="16"/>
         </LinearLayout>
 
