@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <!-- Графическая иконка -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_image_view"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="96dp"
+        android:layout_height="96dp" />
+
+
+    <!-- Имя пользователя -->
+    <TextView
+        android:id="@+id/user_name_text_view"
+        android:layout_below="@id/user_image_view"
+        style="@style/TextView.Primary.Header"
+        android:text="Имя"
+        android:layout_marginTop="@dimen/text_small_margin"/>
+
+    <TextView
+        android:id="@+id/user_nick_text_view"
+        android:text="Ник"
+        android:layout_below="@id/user_name_text_view"
+        style="@style/TextView.Secondary"
+        android:layout_marginTop="@dimen/text_small_margin"/>
+
+    <TextView
+        android:id="@+id/user_description_text_view"
+        android:text="Описание"
+        android:layout_below="@id/user_nick_text_view"
+        style="@style/TextView.Primary"
+        android:layout_marginTop="@dimen/text_small_margin"/>
+
+
+    <!-- Настройка местоположения и его иконки -->
+    <TextView
+        android:id="@+id/user_Location_icon_text_view"
+        android:text="@string/fa_map_marker"
+        android:layout_alignBaseline="@id/user_Location_text_view"
+        style="@style/TextIcon"
+        android:layout_below="@id/user_description_text_view"
+        android:layout_marginTop="@dimen/text_small_margin"/>
+
+    <TextView
+        android:id="@+id/user_Location_text_view"
+        android:text="Местоположение"
+        style="@style/TextView.Secondary"
+        android:layout_toEndOf="@id/user_Location_icon_text_view"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/user_description_text_view"
+        android:layout_marginTop="@dimen/text_small_margin"/>
+
+
+
+    <!-- Комментарий -->
+    <TextView
+        android:id="@+id/user_following_count_text_view"
+        android:text="4"
+        android:layout_below="@id/user_Location_text_view"
+        style="@style/TextView.Primary.Bold"
+        android:layout_marginTop="@dimen/text_small_margin"/>
+
+    <TextView
+        android:id="@+id/user_following_text_view"
+        android:text="@string/following_hint"
+        android:layout_below="@id/user_Location_text_view"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/user_following_count_text_view"
+        style="@style/TextView.Secondary"
+        android:layout_marginTop="@dimen/text_small_margin"/>
+
+    <TextView
+        android:id="@+id/user_followings_count_text_view"
+        android:text="27"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/user_Location_text_view"
+        android:layout_toEndOf="@id/user_following_text_view"
+        style="@style/TextView.Primary.Bold"
+        android:layout_toRightOf="@id/user_followings_count_text_view"
+        android:layout_marginTop="@dimen/text_small_margin"/>
+
+    <TextView
+        android:id="@+id/user_followings_text_view"
+        android:text="@string/followers_hint"
+        android:layout_marginStart="5dp"
+        android:layout_below="@id/user_Location_text_view"
+        android:layout_toEndOf="@id/user_followings_count_text_view"
+        style="@style/TextView.Secondary"
+        android:layout_marginTop="@dimen/text_small_margin"/>
+
+</RelativeLayout>
