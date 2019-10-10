@@ -1,6 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout
+    xmlns: android="http://schemas.android.com/apk/res/android"
+    android:padding="8dp"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+
+
+    !-- Графическая иконка -->
+   <ImageView
+       android:id="@+id/user_image_view"
+       android:src="@mipmap/ic_launcher"
+       android:layout_width="96dp"
+       android:layout_height="96dp">
+
+
+    <TextView
+        android:id="@+id/user_text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/user_image_view"
+        android:text="Имя"
+        android:/>
+
+    <TextView
+        android:id="@+id/user_nik_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/user_text_name"
+        android:text="Ник" />
+
+    <TextView
+        android:id="@+id/user_text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/user_nik_name"
+        android:text="Дата" />
+
+    <TextView
+        android:id="@+id/user_description_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_text_name"
+        android:layout_toRightOf="@id/user_image_view"
+        android:text="Описание" />
+
+    <ImageView
+        android:id="@+id/content_image_view"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_description_text"
+        android:layout_toRightOf="@id/user_image_view"/>
+
+
+    <TextView
+        android:id="@+id/user_content_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_below="@id/content_image_view"
+        android:layout_toEndOf="@id/user_image_view"/>
+
+    <TextView
+        android:id="@+id/user_laiks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_image_view"
+        android:text="TextView"
+        android:layout_toEndOf="@+id/user_content_read" />
+
+</RelativeLayout>
