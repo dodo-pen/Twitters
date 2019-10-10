@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns: android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:padding="8dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -8,66 +7,101 @@
 
 
     !-- Графическая иконка -->
-   <ImageView
+   <de.hdodenhof.circleimageview.CircleImageView
        android:id="@+id/user_image_view"
        android:src="@mipmap/ic_launcher"
-       android:layout_width="96dp"
-       android:layout_height="96dp">
+       android:layout_width="48dp"
+       android:layout_height="48dp"
+       android:layout_marginEnd="@dimen/text_small_margin"/>
 
 
     <TextView
         android:id="@+id/user_text_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/user_image_view"
+        android:layout_toEndOf="@+id/user_image_view"
         android:text="Имя"
-        android:/>
+        style="@style/TextView.Primary.Bold" />
 
     <TextView
         android:id="@+id/user_nik_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/user_text_name"
-        android:text="Ник" />
+        android:layout_toEndOf="@+id/user_text_name"
+        android:text="boostor"
+        style="@style/TextView.Secondary"
+        android:layout_marginStart="@dimen/text_small_margin"/>
 
     <TextView
         android:id="@+id/user_text_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/user_nik_name"
-        android:text="Дата" />
+        android:layout_toEndOf="@+id/user_nik_name"
+        android:layout_marginStart="@dimen/text_small_margin"
+        android:text="octob 10"
+        style="@style/TextView.Secondary"
+        android:maxLines="1"
+        android:ellipsize="end"/>
 
     <TextView
         android:id="@+id/user_description_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_below="@id/user_text_name"
-        android:layout_toRightOf="@id/user_image_view"
-        android:text="Описание" />
+        android:layout_toEndOf="@id/user_image_view"
+        android:text="С этой мыслью я пошел к нашему старшему Backend-разработчику Максиму Шамаеву"
+        style="@style/TextView.Primary"
+        android:layout_marginTop="@dimen/text_small_margin"/>
 
     <ImageView
         android:id="@+id/content_image_view"
         android:src="@mipmap/ic_launcher"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
         android:layout_below="@+id/user_description_text"
-        android:layout_toRightOf="@id/user_image_view"/>
+        android:layout_toEndOf="@id/user_image_view" />
 
-
-    <TextView
-        android:id="@+id/user_content_read"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:orientation="horizontal"
         android:layout_below="@id/content_image_view"
-        android:layout_toEndOf="@id/user_image_view"/>
+        android:layout_toEndOf="@id/user_image_view">
 
-    <TextView
-        android:id="@+id/user_laiks"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/content_image_view"
-        android:text="TextView"
-        android:layout_toEndOf="@+id/user_content_read" />
+
+        <LinearLayout
+            android:id="@+id/retweeter_conteiner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextIcon"
+                android:text="@string/fa_retweet"/>
+
+            <TextView
+                android:id="@+id/retweet_text_view"
+                style="@style/TextView.Secondary"
+                android:layout_marginStart="@dimen/text_small_margin"
+                android:text="16"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/likes_conteiner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextIcon"
+                android:text="@string/fa_heart_o"/>
+
+            <TextView
+                android:id="@+id/likes_text_view"
+                style="@style/TextView.Secondary"
+                android:layout_marginStart="@dimen/text_small_margin"
+                android:text="16"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
 
 </RelativeLayout>
