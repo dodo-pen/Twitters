@@ -66,9 +66,7 @@
 
         <LinearLayout
             android:id="@+id/retweeter_conteiner"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            style="@style/HalfWidth"
             android:orientation="horizontal">
 
             <TextView
@@ -84,9 +82,7 @@
 
         <LinearLayout
             android:id="@+id/likes_conteiner"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            style="@style/HalfWidth"
             android:orientation="horizontal">
 
             <TextView
